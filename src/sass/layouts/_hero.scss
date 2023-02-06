@@ -1,0 +1,30 @@
+.hero {
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/bg-image/bg-img-mob.jpg);
+  @include retina {
+    background-image: url(../images/bg-image/bg-img-mob-2x.jpg);
+  }
+
+  @include desktop {
+    height: 485px;
+    background-image: url(../images/bg-image/bg-img-desk.jpg);
+    @include retina {
+      background-image: url(../images/bg-image/bg-img-desk-2x.jpg);
+    }
+  }
+}
+
+.logo__hero--pic {
+  display: none;
+
+  @include desktop {
+    display: block;
+   //  margin-left: 123px;
+   //  margin-top: 70px;
+    width: 248px;
+    height: 57px;
+  }
+}
