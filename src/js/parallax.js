@@ -9,10 +9,10 @@ window.onload = function () {
       const coins = document.querySelector('.images-parallax__coins');
 
       const forPlayer1 = 40;
-      const forPlayers2 = 20;
+      const forPlayers2 = 25;
       const forCoins = 30;
 
-      const speed = 0.04;
+      const speed = 0.05;
 
       let positionX = 0,
          positionY = 0;
