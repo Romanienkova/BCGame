@@ -1,30 +1,124 @@
-.hero {
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/bg-image/bg-img-mob.jpg);
-  @include retina {
-    background-image: url(../images/bg-image/bg-img-mob-2x.jpg);
-  }
-
-  @include desktop {
-    height: 485px;
-    background-image: url(../images/bg-image/bg-img-desk.jpg);
-    @include retina {
-      background-image: url(../images/bg-image/bg-img-desk-2x.jpg);
-    }
-  }
+.wrapper {
+   min-height: 100%;
 }
 
-.logo__hero--pic {
-  display: none;
+.parallax {
+   min-height: 100vh;
+}
 
-  @include desktop {
-    display: block;
-   //  margin-left: 123px;
-   //  margin-top: 70px;
-    width: 248px;
-    height: 57px;
-  }
+.parallax__body {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.parallax__images {
+   position: absolute;
+   width: 120%;
+   height: 120%;
+   top: -10%;
+   left: -10%;
+   z-index: 1;
+}
+
+.images-parallax__item {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
+
+.images-parallax__bg-img,
+.images-parallax__player1,
+.images-parallax__players2,
+.images-parallax__coins {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+}
+
+.images-parallax__bg-img {
+   top: 126px;
+   height: 400px;
+   z-index: -1;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(../images/hero/bg-img-mob.jpg);
+   @include retina {
+      background-image: url(../images/hero/bg-img-mob-2x.jpg);
+   }
+   @include desktop {
+      top: 74px;
+
+      height: 485px;
+      background-image: url(../images/hero/bg-img-desk.jpg);
+      @include retina {
+         background-image: url(../images/hero/bg-img-desk-2x.jpg);
+      }
+   }
+}
+
+.images-parallax__player1 {
+   top: 200px;
+   left: 12px;
+   height: 309px;
+
+   z-index: 4;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(../images/hero/player1.png);
+   @include retina {
+      background-image: url(../images/hero/player1-2x.png);
+   }
+   @include desktop {
+      top: 138px;
+      left: 130px;
+      height: 390px;
+   }
+}
+
+.images-parallax__players2{
+	top: 148px;
+   left: 0;
+   height: 324px;
+
+   z-index: 2;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(../images/hero/players2-mob.png);
+   @include retina {
+      background-image: url(../images/hero/players2-mob-2x.png);
+   }
+   @include desktop {
+        height: 403px;
+    top: 72px;
+    left: 247px;
+	 background-image: url(../images/hero/players2-desk.png);
+   @include retina {
+      background-image: url(../images/hero/players2-desk-2x.png);
+   }
+   }
+}
+
+.images-parallax__coins{
+   @include desktop {
+        height: 403px;
+    top: 72px;
+    left: 480px;
+	    z-index: 3;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+	 background-image: url(../images/hero/coins-desk.png);
+   @include retina {
+      background-image: url(../images/hero/coins-desk-2x.png);
+   }
+   }
 }

@@ -1,13 +1,15 @@
 .header {
-	// position: absolute;
+	position: relative;
+	z-index: 1;
   display: flex;
   justify-content: center;
   text-align: end;
   margin-left: auto;
   margin-right: auto;
   height: 61px;
+
   @include desktop {
-    display: none;
+    height: 0;
   }
 }
 
@@ -16,4 +18,12 @@
 
   width: 190px;
   height: 44px;
+
+  @include desktop {
+    width: 248px;
+    height: 57px;
+
+    margin-top: 74px;
+    margin-right: 600px;
+  }
 }
