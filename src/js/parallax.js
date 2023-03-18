@@ -50,7 +50,28 @@ window.onload = function () {
 			const coordY = e.pageY - parallaxHeight / 2;
 
 			coordXprocent = coordX / parallaxWidth * 100;
-			coordYprocent=coordY / parallaxHeight * 100;
+			coordYprocent = coordY / parallaxHeight * 100;
 		});
+
+
+		let thresholdSets = [];
+		for (let i = 0; i < 1.0; i += 0.005) {
+			thresholdSets.push(i);
+		}
+		const callback = function (entries, observer) {
+			const scrollTopProcent = window.pageYOffset / parallax.offsetHeight * 100;
+			setParallaxItemsStyle(scrollTopProcent);
+		};
+
+		const observer = new IntersectionObserver(callback, { threshold: thresholdSets });
+
+		observer.observe(document.querySelector('.content'));
+
+		function setParallaxItemsStyle(scrollTopProcent) { 
+			content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 9}%);`;
+			coins.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 6}%);`;
+			player1.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 6}%);`;
+			players2.parentElement.style.cssText = `transform: translate(0%,-${scrollTopProcent / 3}%);`;
+		}
    }
 };
