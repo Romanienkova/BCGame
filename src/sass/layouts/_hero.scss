@@ -1,18 +1,24 @@
 .wrapper {
-	position: relative;
+   position: relative;
    min-height: 100%;
 }
 
 .parallax {
+	   @include tablet {
    min-height: 100vh;
+   }
+
 }
 
 .parallax__body {
-   position: fixed;
-   width: 100%;
+   position: absolute;
+   width: 99%;
    height: 100%;
-   top: 0;
-   left: 0;
+   transform: translate(-10px, -60px);
+
+   @include desktop {
+      transform: translate(-10px, 0px);
+   }
 }
 
 .parallax__images {
@@ -43,20 +49,28 @@
 }
 
 .images-parallax__bg-img {
-   top: 126px;
-   height: 400px;
-   z-index: -1;
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-image: url(../images/hero/bg-img-mob.jpg);
-   @include retina {
-      background-image: url(../images/hero/bg-img-mob-2x.jpg);
-   }
-   @include desktop {
-      top: 74px;
+      margin: 0 auto;
+      top: 55px;
+      height: 393px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/hero/bg-img-mob.jpg);
+      @include retina {
+         background-image: url(../images/hero/bg-img-mob-2x.jpg);
+      }
 
-      height: 485px;
+   @include tablet {
+		      top: 128px;
+      background-image: url(../images/hero/bg-img-tab.jpg);
+      @include retina {
+         background-image: url(../images/hero/bg-img-tab-2x.jpg);
+      }
+   }
+
+   @include desktop {
+      top: 94px;
+      height: 582px;
+      background-size: cover;
       background-image: url(../images/hero/bg-img-desk.jpg);
       @include retina {
          background-image: url(../images/hero/bg-img-desk-2x.jpg);
@@ -65,7 +79,7 @@
 }
 
 .images-parallax__player1 {
-   top: 200px;
+   top: 122px;
    left: 12px;
    height: 309px;
 
@@ -77,49 +91,69 @@
    @include retina {
       background-image: url(../images/hero/player1-2x.png);
    }
+
+	   @include tablet {
+      top: 176px;
+      left: 12px;
+   }
+
    @include desktop {
-      top: 138px;
-      left: 130px;
-      height: 390px;
+      top: 168px;
+      left: 246px;
+      height: 481px;
    }
 }
 
-.images-parallax__players2{
-	top: 148px;
-   left: 0;
-   height: 324px;
-
-   z-index: 2;
-   background-size: contain;
+.images-parallax__players2 {
    background-repeat: no-repeat;
    background-position: center;
-   background-image: url(../images/hero/players2-mob.png);
-   @include retina {
-      background-image: url(../images/hero/players2-mob-2x.png);
+      margin: 0 auto;
+      top: 70px;
+      left: 0px;
+      height: 319px;
+      z-index: 2;
+
+      background-image: url(../images/hero/players2-mob.png);
+      @include retina {
+         background-image: url(../images/hero/players2-mob-2x.png);
+      }
+
+   @include tablet {
+      margin: 0 auto;
+      top: 126px;
+      left: 116px;
+      height: 319px;
+      z-index: 2;
+
+      background-image: url(../images/hero/players2-tab.png);
+      @include retina {
+         background-image: url(../images/hero/players2-tab-2x.png);
+      }
    }
+
    @include desktop {
-        height: 403px;
-    top: 72px;
-    left: 247px;
-	 background-image: url(../images/hero/players2-desk.png);
-   @include retina {
-      background-image: url(../images/hero/players2-desk-2x.png);
-   }
+      height: 498px;
+      top: 82px;
+      left: 382px;
+      background-image: url(../images/hero/players2-desk.png);
+      @include retina {
+         background-image: url(../images/hero/players2-desk-2x.png);
+      }
    }
 }
 
-.images-parallax__coins{
+.images-parallax__coins {
    @include desktop {
-        height: 403px;
-    top: 72px;
-    left: 480px;
-	    z-index: 3;
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-	 background-image: url(../images/hero/coins-desk.png);
-   @include retina {
-      background-image: url(../images/hero/coins-desk-2x.png);
-   }
+      height: 403px;
+      top: 72px;
+      left: 550px;
+      z-index: 3;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/hero/coins-desk.png);
+      @include retina {
+         background-image: url(../images/hero/coins-desk-2x.png);
+      }
    }
 }
