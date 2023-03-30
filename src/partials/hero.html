@@ -1,20 +1,72 @@
-<div class="wrapper container">
-   <section class="hero parallax">
-      <div class="parallax__body">
-         <div class="parallax__images images-parallax">
-            <div class="images-parallax__item">
-               <div class="images-parallax__bg-img"></div>
-            </div>
-            <div class="images-parallax__item">
-               <div class="images-parallax__player1"></div>
-            </div>
-            <div class="images-parallax__item">
-               <div class="images-parallax__players2"></div>
-            </div>
-            <div class="images-parallax__item">
-               <div class="images-parallax__coins"></div>
+<section class="hero">
+   <h1 class="visually-hidden">BC Game</h1>
+
+   <section class="hero">
+      <div class="images-parallax__bg-img"></div>
+      <div class="wrapper">
+         <div class="parallax">
+            <div class="parallax__body">
+               <div class="parallax__images images-parallax">
+                  <div class="images-parallax__item">
+                     <div class="images-parallax__players2"></div>
+                  </div>
+                  <div class="images-parallax__item">
+                     <div class="images-parallax__player1"></div>
+                  </div>
+                  <div class="images-parallax__item">
+                     <div class="images-parallax__coins"></div>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
+
+      <div class="container">
+         <div class="hero__info">
+            <div class="hero__info-bg">
+               <picture class="spin">
+                  <source
+                     srcset="
+                        ./images/free-spin/spin-desk.png    1x,
+                        ./images/free-spin/spin-desk-2x.png 2x
+                     "
+                     media="(min-width: 1200px)"
+                  />
+                  <source
+                     srcset="
+                        ./images/free-spin/spin-mob.png    1x,
+                        ./images/free-spin/spin-mob-2x.png 2x
+                     "
+                     media="(max-width: 1199px)"
+                  />
+
+                  <img
+                     src="./images/header/logo-header-desk.png"
+                     alt="spin"
+                     width="319"
+                  />
+               </picture>
+            </div>
+            <div class="hero__info-coin"></div>
+            <div class="hero__info-text">
+               <ul class="hero__info-list">
+                  <li class="hero__info-item">Deposit bonus</li>
+                  <li class="hero__info-item white">& free spin up to</li>
+               </ul>
+               <ul class="hero__info-list orange">
+                  <li class="hero__info-item">760%</li>
+                  <li class="hero__info-item">5 btc</li>
+               </ul>
+            </div>
+            <a
+               class="btn-hero"
+               href="https://bc.game/uk/sports"
+               target="_blank"
+               rel="noopener nofollow noreferrer"
+            >
+               <span class="join">Join</span><span>now!</span>
+            </a>
+         </div>
+      </div>
    </section>
-</div>
+</section>
