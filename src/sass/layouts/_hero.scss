@@ -4,8 +4,9 @@
 }
 
 .parallax {
-
-		min-height: 100vh;
+	   @include tablet {
+   min-height: 100vh;
+   }
 
 }
 
@@ -37,6 +38,7 @@
    left: 0;
 }
 
+.images-parallax__bg-img,
 .images-parallax__player1,
 .images-parallax__players2,
 .images-parallax__coins {
@@ -47,25 +49,28 @@
 }
 
 .images-parallax__bg-img {
-   position: relative;
-   top: -5px;
-   z-index: -1;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 1137px;
-   height: 393px;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-image: url(../images/hero/bg-img-mob.jpg);
-   @include retina {
-      background-image: url(../images/hero/bg-img-mob-2x.jpg);
+      margin: 0 auto;
+      top: 55px;
+      height: 393px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/hero/bg-img-mob.jpg);
+      @include retina {
+         background-image: url(../images/hero/bg-img-mob-2x.jpg);
+      }
+
+   @include tablet {
+		      top: 128px;
+      background-image: url(../images/hero/bg-img-tab.jpg);
+      @include retina {
+         background-image: url(../images/hero/bg-img-tab-2x.jpg);
+      }
    }
 
    @include desktop {
-      top: -98px;
-      max-width: 1689px;
+      top: 94px;
       height: 582px;
+      background-size: cover;
       background-image: url(../images/hero/bg-img-desk.jpg);
       @include retina {
          background-image: url(../images/hero/bg-img-desk-2x.jpg);
@@ -74,49 +79,62 @@
 }
 
 .images-parallax__player1 {
-   position: relative;
-   top: -200px;
-   // left: -6px;
-   max-width: 215px;
-   height: 393px;
-   margin-left: auto;
-   margin-right: auto;
+   top: 122px;
+   left: 12px;
    height: 309px;
-   background-position: center;
-   background-size: cover;
+
+   z-index: 4;
+   background-size: contain;
    background-repeat: no-repeat;
-   background-image: url(../images/hero/player1-mob.png);
+   background-position: center;
+   background-image: url(../images/hero/player1.png);
    @include retina {
-      background-image: url(../images/hero/player1-mob-2x.png);
+      background-image: url(../images/hero/player1-2x.png);
+   }
+
+	   @include tablet {
+      top: 176px;
+      left: 12px;
    }
 
    @include desktop {
-      top: -527px;
-      left: 262px;
-      max-width: 335px;
+      top: 168px;
+      left: 246px;
       height: 481px;
    }
 }
 
 .images-parallax__players2 {
-   position: relative;
-   top: -254px;
-   max-width: 1137px;
-   height: 393px;
-   margin-left: auto;
-   margin-right: auto;
-   background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   background-image: url(../images/hero/players2-mob.png);
-   @include retina {
-      background-image: url(../images/hero/players2-mob-2x.png);
+      margin: 0 auto;
+      top: 70px;
+      left: 0px;
+      height: 319px;
+      z-index: 2;
+
+      background-image: url(../images/hero/players2-mob.png);
+      @include retina {
+         background-image: url(../images/hero/players2-mob-2x.png);
+      }
+
+   @include tablet {
+      margin: 0 auto;
+      top: 126px;
+      left: 116px;
+      height: 319px;
+      z-index: 2;
+
+      background-image: url(../images/hero/players2-tab.png);
+      @include retina {
+         background-image: url(../images/hero/players2-tab-2x.png);
+      }
    }
 
    @include desktop {
-      top: -610px;
-      max-width: 2201px;
       height: 498px;
+      top: 82px;
+      left: 382px;
       background-image: url(../images/hero/players2-desk.png);
       @include retina {
          background-image: url(../images/hero/players2-desk-2x.png);
@@ -126,16 +144,11 @@
 
 .images-parallax__coins {
    @include desktop {
-      position: relative;
-      top: -650px;
-      left: 5px;
-      z-index: 1;
-
-      height: 464px;
-      max-width: 2201px;
-      margin-left: auto;
-      margin-right: auto;
-      background-size: cover;
+      height: 403px;
+      top: 72px;
+      left: 550px;
+      z-index: 3;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       background-image: url(../images/hero/coins-desk.png);
