@@ -1,46 +1,46 @@
-.wrapper {
-   position: relative;
-   min-height: 100%;
-}
+// .wrapper {
+//    position: relative;
+//    min-height: 100%;
+// }
 
-.parallax {
-	min-height: 100vh;
-}
+// .parallax {
+// 	min-height: 100vh;
+// }
 
-.parallax__body {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   transform: translate(-10px, -60px);
+// .parallax__body {
+//    position: absolute;
+//    width: 100%;
+//    height: 100%;
+//    transform: translate(-10px, -60px);
 
-   @include desktop {
-      transform: translate(-10px, 0px);
-   }
-}
+//    @include desktop {
+//       transform: translate(-10px, 0px);
+//    }
+// }
 
-.parallax__images {
-   position: absolute;
-   width: 120%;
-   height: 120%;
-   top: -10%;
-   left: -10%;
-   z-index: 1;
-}
+// .parallax__images {
+//    position: absolute;
+//    width: 120%;
+//    height: 120%;
+//    top: -10%;
+//    left: -10%;
+//    z-index: 1;
+// }
 
-.images-parallax__item {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-}
+// .images-parallax__item {
+//    position: absolute;
+//    width: 100%;
+//    height: 100%;
+//    top: 0;
+//    left: 0;
+// }
 
 .images-parallax__player1,
 .images-parallax__players2,
 .images-parallax__coins {
    position: absolute;
    width: 100%;
-   height: 100%;
+   // height: 100%;
    left: 0;
 }
 
@@ -73,8 +73,8 @@
 
 .images-parallax__player1 {
    position: relative;
-   top: -200px;
-   // left: -6px;
+   top: -735px;
+   left: -6px;
    max-width: 215px;
    height: 393px;
    margin-left: auto;
@@ -89,8 +89,8 @@
    }
 
    @include desktop {
-      top: -527px;
-      left: 262px;
+      top: -1104px;
+      left: 277px;
       max-width: 335px;
       height: 481px;
    }
@@ -98,7 +98,7 @@
 
 .images-parallax__players2 {
    position: relative;
-   top: -254px;
+   top: -396px;
    max-width: 1137px;
    height: 393px;
    margin-left: auto;
@@ -112,7 +112,7 @@
    }
 
    @include desktop {
-      top: -610px;
+      top: -685px;
       max-width: 2201px;
       height: 498px;
       background-image: url(../images/hero/players2-desk.png);
@@ -125,11 +125,11 @@
 .images-parallax__coins {
    @include desktop {
       position: relative;
-      top: -650px;
+      top: -1693px;
       left: 5px;
       z-index: 1;
 
-      height: 464px;
+      max-height: 464px;
       max-width: 2201px;
       margin-left: auto;
       margin-right: auto;
