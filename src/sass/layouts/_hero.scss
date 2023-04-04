@@ -106,7 +106,7 @@
    margin-right: auto;
    background-size: cover;
    background-repeat: no-repeat;
-   background-position: center;
+   // background-position: center;
    background-image: url(../images/hero/players2-mob.png);
    @include retina {
       background-image: url(../images/hero/players2-mob-2x.png);
