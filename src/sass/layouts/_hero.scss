@@ -3,9 +3,10 @@
 //    min-height: 100%;
 // }
 
-// .parallax {
-// 	min-height: 100vh;
-// }
+.parallax {
+   position: relative;
+   top: -395px;
+}
 
 // .parallax__body {
 //    position: absolute;
@@ -18,22 +19,22 @@
 //    }
 // }
 
-// .parallax__images {
-//    position: absolute;
-//    width: 120%;
-//    height: 120%;
-//    top: -10%;
-//    left: -10%;
-//    z-index: 1;
-// }
+.parallax__images {
+   position: absolute;
+   width: 120%;
+   height: 120%;
+   top: -10%;
+   left: -10%;
+   z-index: 1;
+}
 
-// .images-parallax__item {
-//    position: absolute;
-//    width: 100%;
-//    height: 100%;
-//    top: 0;
-//    left: 0;
-// }
+.images-parallax__item {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
 
 .images-parallax__player1,
 .images-parallax__players2,
@@ -61,9 +62,9 @@
    }
 
    @include desktop {
-      top: -98px;
+      top: -116px;
       max-width: 1689px;
-      height: 582px;
+      height: 562px;
       background-image: url(../images/hero/bg-img-desk.jpg);
       @include retina {
          background-image: url(../images/hero/bg-img-desk-2x.jpg);
@@ -73,7 +74,7 @@
 
 .images-parallax__player1 {
    position: relative;
-   top: -735px;
+   top: -340px;
    left: -6px;
    max-width: 215px;
    height: 393px;
@@ -89,8 +90,8 @@
    }
 
    @include desktop {
-      top: -1104px;
-      left: 277px;
+      top: -704px;
+      left: 248px;
       max-width: 335px;
       height: 481px;
    }
@@ -98,7 +99,7 @@
 
 .images-parallax__players2 {
    position: relative;
-   top: -396px;
+   top: -2px;
    max-width: 1137px;
    height: 393px;
    margin-left: auto;
@@ -112,7 +113,8 @@
    }
 
    @include desktop {
-      top: -685px;
+      top: -289px;
+      left: 112px;
       max-width: 2201px;
       height: 498px;
       background-image: url(../images/hero/players2-desk.png);
@@ -125,11 +127,11 @@
 .images-parallax__coins {
    @include desktop {
       position: relative;
-      top: -1693px;
-      left: 5px;
+      top: -1310px;
+      left: -5px;
       z-index: 1;
 
-      max-height: 464px;
+      height: 464px;
       max-width: 2201px;
       margin-left: auto;
       margin-right: auto;
