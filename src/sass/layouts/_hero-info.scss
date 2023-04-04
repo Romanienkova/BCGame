@@ -5,15 +5,18 @@
    width: 358px;
    height: 183px;
    border-radius: 30px;
+   background-position: center;
+
    background: linear-gradient(285.4deg, #2e001d 12.47%, #240b59 93.42%);
    filter: drop-shadow(-2px 8px 12px rgba(0, 0, 0, 0.2));
-      transform: scale(0.9);
+   transform: scale(0.96);
 
    @include desktop {
       width: 540px;
       height: 298px;
       margin-top: -1980px;
       margin-left: -13px;
+      transform: scale(1);
    }
 }
 
