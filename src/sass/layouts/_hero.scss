@@ -100,6 +100,7 @@
       left: 112px;
       max-width: 2201px;
       height: 498px;
+     background-size: contain;
       background-image: url(../images/hero/players2-desk.png);
       @include retina {
          background-image: url(../images/hero/players2-desk-2x.png);
